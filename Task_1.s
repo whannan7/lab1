@@ -6,7 +6,7 @@
 .globl fill_ram # Make function visible to C program
 
 fill_ram:
-# Store FFh into RAM locations 50H - 58H using direct addressing
+
 
     movb $0xFF, ram+0x50
     movb $0xFF, ram+0x51
