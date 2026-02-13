@@ -1,6 +1,6 @@
     .section .bss
     .globl  ram
-    .comm   ram, 256, 1         
+    .comm   ram, 256   
 
     .section .text               
     .globl  fill_ram

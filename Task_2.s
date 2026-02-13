@@ -1,6 +1,6 @@
  .section .bss
     .globl  ram
-    .lcomm   ram, 256, 1         
+    .lcomm   ram, 256       
     .section .text
     .globl  fill_ram             
 
