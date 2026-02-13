@@ -6,7 +6,7 @@
     .globl  fill_ram            
 
 fill_ram:
-    # Compute 1 + 2 + ... + 10 and store result at RAM[50h]
+    # Compute 1 + 2 + ... + 10 and store result at RAM 50h
 
     xorl    %eax, %eax          
     movl    $1, %ecx            
