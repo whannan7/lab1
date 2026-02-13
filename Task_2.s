@@ -1,17 +1,16 @@
  .section .bss
     .globl  ram
-    .comm   ram, 256, 1          # 256 bytes of RAM (uninitialized)
-
+    .lcomm   ram, 256, 1         
     .section .text
     .globl  fill_ram             
-    
+
 fill_ram:
-    # Store FFh into RAM locations 50H - 58H using indirect addressing
+    # Store FFh into RAM locations 50H - 58H indirect 
     leaq    ram+0x50, %rdi       
     movl    $9, %ecx             
 
 .Lloop:
-    movb    $0xFF, (%rdi)        
+    movb    $0xFF, (%rdi)       
     incq    %rdi                 
     loop    .Lloop               
     ret

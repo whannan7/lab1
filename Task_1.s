@@ -1,12 +1,12 @@
 .section .bss
 .globl ram
-.lcomm ram, 256 
+.lcomm ram, 256  # Reserve 256 bytes of RAM (uninitialized memory)
 
 .section  .text
 .globl fill_ram # Make function visible to C program
 
 fill_ram:
-
+    # Store FFh into RAM locations 50H - 58H direct
 
     movb $0xFF, ram+0x50
     movb $0xFF, ram+0x51
